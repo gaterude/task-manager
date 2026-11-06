@@ -49,7 +49,8 @@ function createTaskManager() {
   };
 }
 
-// Export the function for use in other JavaScript files.
 if (typeof module !== "undefined" && module.exports) {
   module.exports = createTaskManager;
+} else {
+  globalThis.createTaskManager = createTaskManager;
 }

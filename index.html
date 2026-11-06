@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+
+    input {
+      width: 45%;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    li {
+      margin: 12px 0;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <form id="task-form">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Enter a task"
+        required
+      >
+
+      <select id="priority-input">
+        <option value="normal">Normal</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+
+      <button type="submit">Add Task</button>
+    </form>
+
+    <h2>My Tasks</h2>
+    <ul id="task-list"></ul>
+
+    <button id="save-button">Save Tasks</button>
+
+    <p id="message" aria-live="polite"></p>
+  </div>
+
+  <script src="taskManager.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
